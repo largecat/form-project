@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form proj</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id='signup-form' action="" autocomplete="off">
+    <ul class="form-container">
+      <h1>Sign up</h1>
+
+      <!--   Build a browser form which collects Email, Country, Zip Code, Password and Password Confirmation fields. It should use live inline validation to inform the user whether a field is properly filled in or not. That means highlighting a field red and providing a helpful error message until it has been filled in properly.
+
+The form doesn’t need to actually submit, but you should give an error message if the button is pushed with any active errors or unfilled required fields. For the sake of this lesson, make sure all of the validation occurs in the JavaScript file. If all is well and the form is “submitted”, give the user a high five. -->
+      
+        <li>
+            <label for="email"> Email:</label>
+            <!-- <span class="error">please enter an email address</span> -->
+            
+            <div class="group err">
+                <input type="text" placeholder='enter email' id="email" name="email" />
+                <span id="email-error" class='error' style='display: none'>You must enter a valid email address</span>
+            </div>
+        </li>
+
+        <li>
+            <label for="country">
+              Country:</label>
+
+              <div class="group err">
+                  <input type="text" placeholder='enter country' id="country" name="country" />
+                  <span id="country-error" class='error' style='display: none'>You must enter a country</span>
+              </div>
+        </li>
+        
+        <li>
+            <label for="zipcode">
+              Zipcode:</label>
+              
+              <div class="group err"><input type="text" placeholder='enter zip' id="zipcode" name="zipcode" min="5"/>
+                <span id='zipcode-error' class="error" style='display: none'>Enter a valid zipcode</span></div>
+        </li>
+        
+        <li>
+            <label for="password">
+              Password:</label>
+              
+              <div class="group err"><input type="password" placeholder='enter password' id="password" name="password"/>
+                <span id='password-error' class="error" style='display: none;'>password has to be 7 to 15 characters and contain at least one numeric digit and a special character</span></div>
+              
+        </li>
+        
+        <li>
+            <label for="confirm-password">
+              Confirm Password:</label>
+              <!-- <span class="error"></span> -->
+              <div class="group err">
+                  <input
+                    type="password"
+                    placeholder='confirm password'
+                    id="confirm-password"
+                    name="confirm-password"/>
+                    <span id='confirm-password-error' class="error" style='display: none;'>passwords do not match</span>
+              </div>
+        </li>
+        
+        <li><button id="form-submit">Submit</button></li>
+        </ul>
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
